@@ -7,16 +7,23 @@ const bg = Spheres2Background(document.getElementById('webgl-canvas'), {
   maxSize: 1
 })
 
-const button1 = document.getElementById('colors-btn')
+// Get references to the buttons
+const button1 = document.getElementById('colors-btn');
+const button2 = document.getElementById('home-btn');
 
-document.body.addEventListener('click', (ev) => {
-  if (ev.target !== button1) bg.togglePause()
-})
-
+// Add a click listener to button1
 button1.addEventListener('click', () => {
-  bg.spheres.setColors([0xffffff * Math.random(), 0xffffff * Math.random(), 0xffffff * Math.random()])
-  bg.spheres.light1.color.set(0xffffff * Math.random())
-})
+  button1.classList.add('active');
+  button2.classList.remove('active');
+
+  // Change colors functionality
+  bg.spheres.setColors([
+    0xffffff * Math.random(),
+    0xffffff * Math.random(),
+    0xffffff * Math.random(),
+  ]);
+  bg.spheres.light1.color.set(0xffffff * Math.random());
+});
 
 // Add a click listener to button2
 button2.addEventListener('click', () => {
@@ -24,5 +31,5 @@ button2.addEventListener('click', () => {
   button1.classList.remove('active');
 
   // Redirect to home page
-  window.location.href = 'https://www.whooooosh.com/home/';
+  window.location.href = 'http://www.whooooosh.com/home';
 });
