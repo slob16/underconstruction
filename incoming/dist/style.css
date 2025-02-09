@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+  @font-face {
+    font-family: 'high_cruiser';
+    src: url('highcruiser.woff2') format('woff2'),
+         url('highcruiser.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+body, html, #app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(5, 5, 5, 1) 0%, rgba(98, 90, 86, 0.5) 200%);
+}
+
+#app {
+  position: relative;
+  height: 100%;
+  font-family: 'Montserrat', serif;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(165, 169, 174, 1);
+  line-height: 100%;
+  user-select: none;
+}
+
+h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 80px;
+  font-weight: 500;
+}
+
+#webgl-canvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.buttons {
+  position: fixed; /* Fixed at the bottom of the viewport */
+  width: 100%;
+  bottom: 15px;
+  z-index: 2;
+
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 15px; /* Space between buttons */
+  padding: 10px; /* Optional: Add padding around buttons */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Common button styles */
+button {
+  font-family: "Oswald", serif;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #d8f744; /* Fix border color */
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background: #26282b;
+  color: #faf9f6;
+}
+
+/* Active state for buttons */
+button.active {
+  background: #26282b;
+  border-color: #d8f744;
+  color: #faf9f6;
+}
+
+/* Make buttons responsive */
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 10px; /* Reduce gap between buttons */
+  }
+
+  button {
+    width: 100%; /* Buttons take up full width */
+  }
+}
