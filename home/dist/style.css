@@ -168,7 +168,7 @@ button {
 
 .rotated-text {
   position: fixed;
-  top: 75%;
+  top: 60%;
   right: 20px;
   transform: translate(45%, -600%) rotate(90deg);
   text-transform: uppercase;
