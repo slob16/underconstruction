@@ -24,5 +24,5 @@ button2.addEventListener('click', () => {
   button1.classList.remove('active');
 
   // Redirect to home page
-  window.location.href = 'https://slob16.github.io/underconstruction/home/dist/index.html';
+  window.location.href = 'https://www.whooooosh.com/home/';
 });
