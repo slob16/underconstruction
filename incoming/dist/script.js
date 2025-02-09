@@ -17,3 +17,12 @@ button1.addEventListener('click', () => {
   bg.spheres.setColors([0xffffff * Math.random(), 0xffffff * Math.random(), 0xffffff * Math.random()])
   bg.spheres.light1.color.set(0xffffff * Math.random())
 })
+
+// Add a click listener to button2
+button2.addEventListener('click', () => {
+  button2.classList.add('active');
+  button1.classList.remove('active');
+
+  // Redirect to home page
+  window.location.href = 'https://slob16.github.io/underconstruction/home/dist/index.html';
+});
